@@ -1,9 +1,9 @@
 <!DOCTYPE HTML>
 <html lang="en-us">
 <head>
-<!-- JSON EXAMPLE 2  -->
+<!-- CIT261 Team 7 project  -->
 <meta charset="utf-8">
-<title>Advanced Example</title>
+<title>Exercise Tracker</title>
 <link rel="stylesheet" href="main.css">
 <script type="text/JavaScript">
     // Call this function on button Click
