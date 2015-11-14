@@ -77,18 +77,25 @@ function loadArms() {
                 var results = "";
                 var i = 0;
                 for (i=0; i<=dataArr.length - 1; i++) {
-                    var curls, lifts, squats;
-                    //curls = 0;
-                    //lifts = 0;
-                    //squats = 0;
+                    var curls, triceps, pushups, bench, lunges, calves, lifts, squats;
                     curls = dataArr[i]['curls'];
+                    triceps = dataArr[i]['triceps'];
+                    pushups = dataArr[i]['pushups'];
+                    bench = dataArr[i]['bench'];
+                    lunges = dataArr[i]['lunges'];
+                    calves = dataArr[i]['calves'];
                     lifts = dataArr[i]['lifts'];
-                    squats = dataArr[i]['squats'];          
+                    squats = dataArr[i]['squats'];
                     results += "<tr><th>Week " + (i + 1) + "</th><th> </th></tr>\n\
                                 <tr><td>Curls</td>\n<td>" + curls + 
-                                "</td></tr>\n<tr><td>Leg Lifts</td>\n<td>"
-                                + lifts + "</td></tr>\n\n\
-                                <tr><td>Squats</td>\n<td>" + squats + 
+                                "</td></tr>\n<tr><td>Triceps</td>\n<td>"
+                                + triceps + "</td></tr>\n\n\
+                                <tr><td>Pushups</td>\n<td>" + pushups + 
+                                "</td></tr>\n\n\<tr><td>Bench Press</td>\n<td>" + bench +
+                                "</td></tr>\n\n\<tr><td>Lunges</td>\n<td>" + lunges +
+                                "</td></tr>\n\n\<tr><td>Calf Raises</td>\n<td>" + calves +
+                                "</td></tr>\n\n\<tr><td>Leg Lifts</td>\n<td>" + lifts +
+                                "</td></tr>\n\n\<tr><td>Squats</td>\n<td>" + squats +
                                 "</td></tr>\n";
                     
                 }
