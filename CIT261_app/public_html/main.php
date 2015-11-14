@@ -6,10 +6,54 @@
 <title>Exercise Tracker</title>
 <link rel="stylesheet" href="main.css">
 <script type="text/JavaScript">
-    // Call this function on button Click
-    function saveDataInLS(){
+    //AJAX calls to load Leg Exercise Input Screen
+    function loadLegs() {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (xhttp.readyState == 4 && xhttp.status == 200) {
+      document.getElementById("container").innerHTML = xhttp.responseText;
+    }
+  };
+  xhttp.open("GET", "legs.php", true);
+  xhttp.send();
+}
+//AJAX calls to load Arm Exercise Input Screen
+function loadArms() {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (xhttp.readyState == 4 && xhttp.status == 200) {
+      document.getElementById("container").innerHTML = xhttp.responseText;
+    }
+  };
+  xhttp.open("GET", "arms.php", true);
+  xhttp.send();
+}
+    
+// Call this function on button Click to store Arm workout
+    function saveDataInLSArms(){
     var obj={};
         obj.curls=document.getElementById('curls').value;
+		obj.triceps=document.getElementById('triceps').value;
+        obj.lifts=document.getElementById('lifts').value;
+        obj.bench=document.getElementById('bench').value;
+
+    var listObj=localStorage.getItem('DATA');
+    if(listObj!=null){
+      listObj=JSON.parse(listObj); //this will give array of object
+      listObj.push(obj);
+    }else{
+      listObj=[obj]; //first time 
+    }
+   // Save Data in Local Storage 
+    localStorage.setItem('DATA',JSON.stringify(listObj)); 
+   
+}
+
+// Call this function on button Click to store Leg workout
+    function saveDataInLSLegs(){
+    var obj={};
+        obj.lunges=document.getElementById('lunges').value;
+	obj.calves=document.getElementById('calves').value;
         obj.lifts=document.getElementById('lifts').value;
         obj.squats=document.getElementById('squats').value;
 
@@ -24,10 +68,9 @@
     localStorage.setItem('DATA',JSON.stringify(listObj)); 
    
 }
-
 // dynamically draw the table
 
-function doShowAll() {
+    function doShowAll() {
 	if (CheckBrowser()) {
 		var dataArr= localStorage.getItem('DATA');
                 dataArr=JSON.parse(dataArr);//this Will return An JS Array
@@ -95,16 +138,13 @@ function zoomOut() {
 </head>
 <body>
     <h2>Exercise Tracker</h2>
-    <div id="container">
-        <div id="input">
-            <p>Please input values for your exercises.</p>
     
-            <p>Curls: <input type="text" id="curls"></p>
-            <p>Leg Lifts: <input type="text" id="lifts"></p>
-            <p>Squats: <input type="text" id="squats"></p>
-            <button class="wiggle" type = "button" onClick = "saveDataInLS()">Store Results</button>
-        </div>
-        
+    <button type="button" onclick="loadLegs()">Input Leg Exercises</button>
+
+    <button type="button" onclick="loadArms()">Input Arm Exercises</button>
+
+    <div id="container">
+                
         <div id="history" onClick="zoomIn()">
             <table id=output></table>
         </div>          
