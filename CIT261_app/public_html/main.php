@@ -36,7 +36,6 @@ function loadArms() {
 		obj.triceps=document.getElementById('triceps').value;
         obj.lifts=document.getElementById('lifts').value;
         obj.bench=document.getElementById('bench').value;
-
     var listObj=localStorage.getItem('DATA');
     if(listObj!=null){
       listObj=JSON.parse(listObj); //this will give array of object
@@ -48,7 +47,6 @@ function loadArms() {
     localStorage.setItem('DATA',JSON.stringify(listObj)); 
    
 }
-
 // Call this function on button Click to store Leg workout
     function saveDataInLSLegs(){
     var obj={};
@@ -56,7 +54,6 @@ function loadArms() {
 	obj.calves=document.getElementById('calves').value;
         obj.lifts=document.getElementById('lifts').value;
         obj.squats=document.getElementById('squats').value;
-
     var listObj=localStorage.getItem('DATA');
     if(listObj!=null){
       listObj=JSON.parse(listObj); //this will give array of object
@@ -69,7 +66,6 @@ function loadArms() {
    
 }
 // dynamically draw the table
-
     function doShowAll() {
 	if (CheckBrowser()) {
 		var dataArr= localStorage.getItem('DATA');
@@ -109,7 +105,6 @@ function loadArms() {
 		alert('Cannot store saved list as your browser do not support local storage');
 	}
 }
-
 function CheckBrowser() {
 	if ('localStorage' in window && window['localStorage'] !== null) {
 		// we can use localStorage object to store data
@@ -118,12 +113,10 @@ function CheckBrowser() {
 			return false;
 	}
 }
-
 function ClearAll() {
 	localStorage.clear();
 	doShowAll();
 }
-
 //JS to zoom
 var fontSize = 1;
 function zoomIn() {
@@ -134,7 +127,29 @@ function zoomOut() {
     fontSize -= 0.1;
     document.body.style.fontSize = fontSize + "em";
 }
-
+//BD-function to count workouts and log dates
+//BD-displays alert message every fourth workout
+function clickCounter() {
+    if(typeof(Storage) !== "undefined") {
+        if (localStorage.clickcount) {
+            localStorage.clickcount = Number(localStorage.clickcount)+1;
+			var t = new Date();
+			var today = t.toDateString();
+	//		dates.splice(1, 0, today);
+	//		localStorage.datesList = dates;
+        } else {
+            localStorage.clickcount = 1;
+	//		var dates = [];
+        }
+		document.getElementById("result").innerHTML = "Your workout has been logged: " + today;
+        document.getElementById("result1").innerHTML = "LIFETIME TOTAL workouts logged: " + localStorage.clickcount;
+		if (localStorage.clickcount % 4 == 0) {
+				alert("You are a champion!  Keep up the great work!");
+			}
+	} else {
+        document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
+    }
+}
 //function replaceDiv() {
 //        var container = document.getElementById("container");
 //        var old = document.getElementById("input");
@@ -158,7 +173,7 @@ function zoomOut() {
     </div>
 <br>
 <br>
-<button class="wiggle" type = "button" onClick = "doShowAll()">Show Results</button>
+<button class="wiggle" type = "button" onClick = "doShowAll()">Show all goals.</button>
 
 <p></p>
 <p>
@@ -169,6 +184,12 @@ function zoomOut() {
 <input type="button" value="+" onClick="zoomIn()"/>
 <input type="button" value="-" onClick="zoomOut()"/>
 
+//BD-button to count workouts
+<p><button onclick="clickCounter()" type="button">Log workout with a click of this button!</button></p>
+<br>
+ 
+<div id="result"></div><br>
+<div id="result1"></div>
     
 </body>
 </html>
