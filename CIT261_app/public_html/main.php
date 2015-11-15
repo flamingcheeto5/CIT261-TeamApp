@@ -4,7 +4,7 @@
 <!-- CIT261 Team 7 project  -->
 <meta charset="utf-8">
 <title>Exercise Tracker</title>
-<link rel="stylesheet" href="main.css">
+<link rel="stylesheet" href="/css/main.css">
 <script type="text/JavaScript">
     //AJAX calls to load Leg Exercise Input Screen
     function loadLegs() {
@@ -173,7 +173,7 @@ function clickCounter() {
     </div>
 <br>
 <br>
-<button class="wiggle" type = "button" onClick = "doShowAll()">Show all goals.</button>
+<button type = "button" onClick = "doShowAll()">Show all goals.</button>
 
 <p></p>
 <p>
