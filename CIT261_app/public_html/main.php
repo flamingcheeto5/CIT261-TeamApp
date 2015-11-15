@@ -183,8 +183,7 @@ function clickCounter() {
 
 <input type="button" value="+" onClick="zoomIn()"/>
 <input type="button" value="-" onClick="zoomOut()"/>
-
-//BD-button to count workouts
+<!-- BD-Button to count clicks-->
 <p><button onclick="clickCounter()" type="button">Log workout with a click of this button!</button></p>
 <br>
  
