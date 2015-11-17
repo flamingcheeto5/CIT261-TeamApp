@@ -4,7 +4,7 @@
 <!-- CIT261 Team 7 project  -->
 <meta charset="utf-8">
 <title>Exercise Tracker</title>
-<link rel="stylesheet" href="/css/main.css">
+<link rel="stylesheet" href="css/main.css">
 <script type="text/JavaScript">
     //AJAX calls to load Leg Exercise Input Screen
     function loadLegs() {
@@ -158,9 +158,11 @@ function clickCounter() {
 //    }
 </script>
 </head>
+
 <body>
+
     <h2>Exercise Tracker</h2>
-    
+  
     <button type="button" onclick="loadLegs()">Input Leg Exercises</button>
 
     <button type="button" onclick="loadArms()">Input Arm Exercises</button>
@@ -173,8 +175,9 @@ function clickCounter() {
     </div>
 <br>
 <br>
+<div id="goalscontainer">
 <button type = "button" onClick = "doShowAll()">Show all goals.</button>
-
+</div>
 <p></p>
 <p>
     <label><input type=button value="Clear" onclick="ClearAll()">
@@ -189,6 +192,7 @@ function clickCounter() {
  
 <div id="result"></div><br>
 <div id="result1"></div>
-    
+
 </body>
+
 </html>

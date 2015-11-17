@@ -7,8 +7,6 @@ and open the template in the editor.
     Created on : Oct 2, 2015, 8:41:16 PM
     Author     : ribell
 */
-
-//this is a TEST
 td,th {
 	font-family: monospace;
 	padding: 4px;
@@ -20,6 +18,13 @@ h2 {
 	margin-top: 0px;
         color: white;
 	font-family: sans-serif;
+}
+
+goalscontainer{
+    height: 350px;
+    overflow: hidden;
+    margin: 50px auto;
+    background: black;
 }
 
 body {
@@ -139,26 +144,6 @@ input[type=text]
   transition: all .2s linear;
 }
 input[type=text]:focus
-{
-  width: 100px;
-  border-color: #51a7e8;
-  box-shadow: inset 0 1px 2px rgba(0,0,0,0.1),0 0 5px rgba(81,167,232,0.5);
-  outline: none;
-}
-input[type=password]
-{
-  border: 1px solid #ccc;
-  border-radius: 3px;
-  box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
-  width:200px;
-  min-height: 28px;
-  padding: 4px 20px 4px 8px;
-  font-size: 12px;
-  -moz-transition: all .2s linear;
-  -webkit-transition: all .2s linear;
-  transition: all .2s linear;
-}
-input[type=password]:focus
 {
   width: 100px;
   border-color: #51a7e8;
