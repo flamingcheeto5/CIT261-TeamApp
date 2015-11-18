@@ -6,37 +6,37 @@
 <title>Exercise Tracker</title>
 <link rel="stylesheet" href="css/main.css">
 <script type="text/JavaScript">
-    //AJAX calls to load Leg Exercise Input Screen
-    function loadLegs() {
+    //AJAX calls to load Goal Input Screen
+    function loadGoals() {
   var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function() {
     if (xhttp.readyState == 4 && xhttp.status == 200) {
       document.getElementById("container").innerHTML = xhttp.responseText;
     }
   };
-  xhttp.open("GET", "legs.php", true);
+  xhttp.open("GET", "goals.php", true);
   xhttp.send();
 }
-//AJAX calls to load Arm Exercise Input Screen
-function loadArms() {
+//AJAX calls to load Workout Input Screen
+function loadWorkouts() {
   var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function() {
     if (xhttp.readyState == 4 && xhttp.status == 200) {
       document.getElementById("container").innerHTML = xhttp.responseText;
     }
   };
-  xhttp.open("GET", "arms.php", true);
+  xhttp.open("GET", "workouts.php", true);
   xhttp.send();
 }
     
 // Call this function on button Click to store Arm workout
-    function saveDataInLSArms(){
+    function saveDataInLSWorkouts(){
     var obj={};
         obj.curls=document.getElementById('curls').value;
 		obj.triceps=document.getElementById('triceps').value;
         obj.lifts=document.getElementById('lifts').value;
         obj.bench=document.getElementById('bench').value;
-    var listObj=localStorage.getItem('DATA');
+    var listObj=localStorage.getItem('WORKOUTS');
     if(listObj!=null){
       listObj=JSON.parse(listObj); //this will give array of object
       listObj.push(obj);
@@ -44,17 +44,17 @@ function loadArms() {
       listObj=[obj]; //first time 
     }
    // Save Data in Local Storage 
-    localStorage.setItem('DATA',JSON.stringify(listObj)); 
+    localStorage.setItem('WORKOUTS',JSON.stringify(listObj)); 
    
 }
 // Call this function on button Click to store Leg workout
-    function saveDataInLSLegs(){
+    function saveDataInLSGoals(){
     var obj={};
         obj.lunges=document.getElementById('lunges').value;
 	obj.calves=document.getElementById('calves').value;
         obj.lifts=document.getElementById('lifts').value;
         obj.squats=document.getElementById('squats').value;
-    var listObj=localStorage.getItem('DATA');
+    var listObj=localStorage.getItem('GOALS');
     if(listObj!=null){
       listObj=JSON.parse(listObj); //this will give array of object
       listObj.push(obj);
@@ -62,13 +62,13 @@ function loadArms() {
       listObj=[obj]; //first time 
     }
    // Save Data in Local Storage 
-    localStorage.setItem('DATA',JSON.stringify(listObj)); 
+    localStorage.setItem('GOALS',JSON.stringify(listObj)); 
    
 }
 // dynamically draw the table
     function doShowAll() {
 	if (CheckBrowser()) {
-		var dataArr= localStorage.getItem('DATA');
+		var dataArr= localStorage.getItem('GOALS');
                 dataArr=JSON.parse(dataArr);//this Will return An JS Array
                 var results = "";
                 var i = 0;
@@ -163,9 +163,9 @@ function clickCounter() {
 
     <h2>Exercise Tracker</h2>
   
-    <button type="button" onclick="loadLegs()">Input Leg Exercises</button>
+    <button type="button" onclick="loadGoals()">Enter Goals</button>
 
-    <button type="button" onclick="loadArms()">Input Arm Exercises</button>
+    <button type="button" onclick="loadWorkouts()">Enter Workouts</button>
 
     <div id="container">
                 
@@ -176,7 +176,9 @@ function clickCounter() {
 <br>
 <br>
 <div id="goalscontainer">
-<button type = "button" onClick = "doShowAll()">Show all goals.</button>
+<button type = "button" onClick = "doShowAll()">Show Goals</button>
+<br>
+<button type = "button" onClick = "doShowAll()">Show Workout History</button>
 </div>
 <p></p>
 <p>
