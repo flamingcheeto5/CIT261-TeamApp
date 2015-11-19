@@ -32,9 +32,13 @@ function loadWorkouts() {
 // Call this function on button Click to store Arm workout
     function saveDataInLSWorkouts(){
     var obj={};
-        obj.curls=document.getElementById('curls').value;
-		obj.triceps=document.getElementById('triceps').value;
+        obj.lunges=document.getElementById('lunges').value;
+	obj.calves=document.getElementById('calves').value;
         obj.lifts=document.getElementById('lifts').value;
+        obj.squats=document.getElementById('squats').value;
+        obj.curls=document.getElementById('curls').value;
+	obj.triceps=document.getElementById('triceps').value;
+        obj.pushups=document.getElementById('pushups').value;
         obj.bench=document.getElementById('bench').value;
     var listObj=localStorage.getItem('WORKOUTS');
     if(listObj!=null){
@@ -54,6 +58,10 @@ function loadWorkouts() {
 	obj.calves=document.getElementById('calves').value;
         obj.lifts=document.getElementById('lifts').value;
         obj.squats=document.getElementById('squats').value;
+        obj.curls=document.getElementById('curls').value;
+	obj.triceps=document.getElementById('triceps').value;
+        obj.pushups=document.getElementById('pushups').value;
+        obj.bench=document.getElementById('bench').value;
     var listObj=localStorage.getItem('GOALS');
     if(listObj!=null){
       listObj=JSON.parse(listObj); //this will give array of object
@@ -65,9 +73,9 @@ function loadWorkouts() {
     localStorage.setItem('GOALS',JSON.stringify(listObj)); 
    
 }
-// dynamically draw the table
-    function doShowAll() {
-	if (CheckBrowser()) {
+// dynamically draw the table showing goals
+    function doShowGoals() {
+        if (CheckBrowser()) {
 		var dataArr= localStorage.getItem('GOALS');
                 dataArr=JSON.parse(dataArr);//this Will return An JS Array
                 var results = "";
@@ -82,7 +90,7 @@ function loadWorkouts() {
                     calves = dataArr[i]['calves'];
                     lifts = dataArr[i]['lifts'];
                     squats = dataArr[i]['squats'];
-                    results += "<tr><th>Week " + (i + 1) + "</th><th> </th></tr>\n\
+                    results += "<tr><th>Goals " + (i + 1) + "</th><th> </th></tr>\n\
                                 <tr><td>Curls</td>\n<td>" + curls + 
                                 "</td></tr>\n<tr><td>Triceps</td>\n<td>"
                                 + triceps + "</td></tr>\n\n\
@@ -105,6 +113,48 @@ function loadWorkouts() {
 		alert('Cannot store saved list as your browser do not support local storage');
 	}
 }
+
+// dynamically draw the table showing goals
+    function doShowWorkouts() {
+        if (CheckBrowser()) {
+		var dataArr= localStorage.getItem('WORKOUTS');
+                dataArr=JSON.parse(dataArr);//this Will return An JS Array
+                var results = "";
+                var i = 0;
+                for (i=0; i<=dataArr.length - 1; i++) {
+                    var curls, triceps, pushups, bench, lunges, calves, lifts, squats;
+                    curls = dataArr[i]['curls'];
+                    triceps = dataArr[i]['triceps'];
+                    pushups = dataArr[i]['pushups'];
+                    bench = dataArr[i]['bench'];
+                    lunges = dataArr[i]['lunges'];
+                    calves = dataArr[i]['calves'];
+                    lifts = dataArr[i]['lifts'];
+                    squats = dataArr[i]['squats'];
+                    results += "<tr><th>Workouts Week " + (i + 1) + "</th><th> </th></tr>\n\
+                                <tr><td>Curls</td>\n<td>" + curls + 
+                                "</td></tr>\n<tr><td>Triceps</td>\n<td>"
+                                + triceps + "</td></tr>\n\n\
+                                <tr><td>Pushups</td>\n<td>" + pushups + 
+                                "</td></tr>\n\n\<tr><td>Bench Press</td>\n<td>" + bench +
+                                "</td></tr>\n\n\<tr><td>Lunges</td>\n<td>" + lunges +
+                                "</td></tr>\n\n\<tr><td>Calf Raises</td>\n<td>" + calves +
+                                "</td></tr>\n\n\<tr><td>Leg Lifts</td>\n<td>" + lifts +
+                                "</td></tr>\n\n\<tr><td>Squats</td>\n<td>" + squats +
+                                "</td></tr>\n";
+                    
+                }
+                //below is an example of DOM replace
+                var container = document.getElementById("container");
+                var old = document.getElementById("input");
+                var newdiv = document.getElementById("history");
+                container.replaceChild(newdiv, old);
+                document.getElementById('output').innerHTML = results;
+           } else {
+		alert('Cannot store saved list as your browser do not support local storage');
+	}
+}
+
 function CheckBrowser() {
 	if ('localStorage' in window && window['localStorage'] !== null) {
 		// we can use localStorage object to store data
@@ -150,12 +200,6 @@ function clickCounter() {
         document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
     }
 }
-//function replaceDiv() {
-//        var container = document.getElementById("container");
-//        var old = document.getElementById("input");
-//        var newdiv = document.getElementById("history");
-//        container.replaceChild(newdiv, old);
-//    }
 </script>
 </head>
 
@@ -176,9 +220,9 @@ function clickCounter() {
 <br>
 <br>
 <div id="goalscontainer">
-<button type = "button" onClick = "doShowAll()">Show Goals</button>
+<button type = "button" onClick = "doShowGoals()">Show Goals</button>
 <br>
-<button type = "button" onClick = "doShowAll()">Show Workout History</button>
+<button type = "button" onClick = "doShowWorkouts()">Show Workout History</button>
 </div>
 <p></p>
 <p>
