@@ -70,6 +70,14 @@ function loadWorkouts() {
 	obj.triceps=document.getElementById('triceps').value;
         obj.pushups=document.getElementById('pushups').value;
         obj.bench=document.getElementById('bench').value;
+        obj.lungeset=document.getElementById('lungeset').value;
+	obj.calveset=document.getElementById('calveset').value;
+        obj.liftset=document.getElementById('liftset').value;
+        obj.squatset=document.getElementById('squatset').value;
+        obj.curlset=document.getElementById('curlset').value;
+	obj.tricepset=document.getElementById('tricepset').value;
+        obj.pushupset=document.getElementById('pushupset').value;
+        obj.benchset=document.getElementById('benchset').value;
     var listObj=localStorage.getItem('GOALS');
     if(listObj!=null){
       listObj=JSON.parse(listObj); //this will give array of object
@@ -89,7 +97,7 @@ function loadWorkouts() {
                 var results = "";
                 var i = 0;
                 for (i=0; i<=dataArr.length - 1; i++) {
-                    var curls, triceps, pushups, bench, lunges, calves, lifts, squats;
+                    var curls, triceps, pushups, bench, lunges, calves, lifts, squats, curlset, tricepset, pushupset, benchset, lungeset, calveset, liftset, squatset;
                     curls = dataArr[i]['curls'];
                     triceps = dataArr[i]['triceps'];
                     pushups = dataArr[i]['pushups'];
@@ -98,17 +106,25 @@ function loadWorkouts() {
                     calves = dataArr[i]['calves'];
                     lifts = dataArr[i]['lifts'];
                     squats = dataArr[i]['squats'];
-                    results += "<tr><th>Goals " + (i + 1) + "</th><th> </th></tr>\n\
+                    curlset = dataArr[i]['curlset'];
+                    tricepset = dataArr[i]['tricepset'];
+                    pushupset = dataArr[i]['pushupset'];
+                    benchset = dataArr[i]['benchset'];
+                    lungeset = dataArr[i]['lungeset'];
+                    calveset = dataArr[i]['calveset'];
+                    liftset = dataArr[i]['liftset'];
+                    squatset = dataArr[i]['squatset'];
+                    results += "<tr><th>Workouts Week " + (i + 1) + "</th><th>Weight</th><th>Reps</th></tr>\n\
                                 <tr><td>Curls</td>\n<td>" + curls + 
-                                "</td></tr>\n<tr><td>Triceps</td>\n<td>"
-                                + triceps + "</td></tr>\n\n\
+                                "</td>\n<td>" + curlset + "</td></tr>\n<tr><td>Triceps</td>\n<td>"
+                                + triceps + "</td>\n<td>" + tricepset + "</td></tr>\n\n\
                                 <tr><td>Pushups</td>\n<td>" + pushups + 
-                                "</td></tr>\n\n\<tr><td>Bench Press</td>\n<td>" + bench +
-                                "</td></tr>\n\n\<tr><td>Lunges</td>\n<td>" + lunges +
-                                "</td></tr>\n\n\<tr><td>Calf Raises</td>\n<td>" + calves +
-                                "</td></tr>\n\n\<tr><td>Leg Lifts</td>\n<td>" + lifts +
-                                "</td></tr>\n\n\<tr><td>Squats</td>\n<td>" + squats +
-                                "</td></tr>\n";
+                                "</td>\n<td>" + pushupset + "</td></tr>\n\n\<tr><td>Bench Press</td>\n<td>" + bench +
+                                "</td>\n<td>" + benchset + "</td></tr>\n\n\<tr><td>Lunges</td>\n<td>" + lunges +
+                                "</td>\n<td>" + lungeset + "</td></tr>\n\n\<tr><td>Calf Raises</td>\n<td>" + calves +
+                                "</td>\n<td>" + calveset + "</td></tr>\n\n\<tr><td>Leg Lifts</td>\n<td>" + lifts +
+                                "</td>\n<td>" + liftset + "</td></tr>\n\n\<tr><td>Squats</td>\n<td>" + squats +
+                                "</td>\n<td>" + squatset + "</td></tr>\n";
                     
                 }
                 //below is an example of DOM replace
@@ -130,7 +146,7 @@ function loadWorkouts() {
                 var results = "";
                 var i = 0;
                 for (i=0; i<=dataArr.length - 1; i++) {
-                    var curls, triceps, pushups, bench, lunges, calves, lifts, squats;
+                    var curls, triceps, pushups, bench, lunges, calves, lifts, squats, curlset, tricepset, pushupset, benchset, lungeset, calveset, liftset, squatset;
                     curls = dataArr[i]['curls'];
                     triceps = dataArr[i]['triceps'];
                     pushups = dataArr[i]['pushups'];
