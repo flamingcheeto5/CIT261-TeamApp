@@ -5,7 +5,7 @@
 <meta charset="utf-8">
 <title>Exercise Tracker</title>
 <link rel="stylesheet" href="css/main.css">
-<script src=".scripts/main.js"></script>
+<script src="scripts/main.js"></script>
 </head>
 
 <body>

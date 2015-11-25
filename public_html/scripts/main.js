@@ -2,7 +2,7 @@
   function loadGoals() {
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
-    if (xhttp.readyState == 4 && xhttp.status == 200) {
+    if (xhttp.readyState === 4 && xhttp.status === 200) {
       document.getElementById("container").innerHTML = xhttp.responseText;
       }
     };
@@ -14,7 +14,7 @@
 	function loadWorkouts() {
 		var xhttp = new XMLHttpRequest();
 		xhttp.onreadystatechange = function() {
-		if (xhttp.readyState == 4 && xhttp.status == 200) {
+		if (xhttp.readyState === 4 && xhttp.status === 200) {
 		  document.getElementById("container").innerHTML = xhttp.responseText;
 		  }
 		};
@@ -25,7 +25,7 @@
 //CALL THIS FUNCTION ON BUTTON CLICK TO STORE WORKOUT GOALS
     function saveDataInLSGoals(){
 		var obj={};
-	obj.lungeset=document.getElementById('lungeset').value;
+                obj.lungeset=document.getElementById('lungeset').value;
                 obj.calveset=document.getElementById('calveset').value;
                 obj.liftset=document.getElementById('liftset').value;
                 obj.squatset=document.getElementById('squatset').value;
@@ -33,25 +33,24 @@
                 obj.tricepset=document.getElementById('tricepset').value;
                 obj.pushupset=document.getElementById('pushupset').value;
                 obj.benchset=document.getElementById('benchset').value;
-                obj.lungeset=document.getElementById('lungerset').value;
-                obj.calveset=document.getElementById('calveset').value;
-                obj.liftset=document.getElementById('liftset').value;
-                obj.squatset=document.getElementById('squatset').value;
-                obj.curlset=document.getElementById('curlset').value;
-                obj.tricepset=document.getElementById('tricepset').value;
-                obj.pushupset=document.getElementById('pushupset').value;
-                obj.benchset=document.getElementById('benchset').value;
-                obj.lungeset=document.getElementById('lungerset').value;
-                obj.calveset=document.getElementById('calveset').value;
-                obj.liftset=document.getElementById('liftset').value;
-                obj.squatset=document.getElementById('squatset').value;
-                obj.curlset=document.getElementById('curlset').value;
-                obj.tricepset=document.getElementById('tricepset').value;
-                obj.pushupset=document.getElementById('pushupset').value;
-                obj.benchset=document.getElementById('benchset').value;
-                obj.lungeset=document.getElementById('lungerset').value;
+                obj.lungereps=document.getElementById('lungereps').value;
+                obj.calvereps=document.getElementById('calvereps').value;
+                obj.liftreps=document.getElementById('liftreps').value;
+                obj.squatreps=document.getElementById('squatreps').value;
+                obj.curlreps=document.getElementById('curlreps').value;
+                obj.tricepreps=document.getElementById('tricepreps').value;
+                obj.pushupreps=document.getElementById('pushupreps').value;
+                obj.benchreps=document.getElementById('benchreps').value;
+                obj.lungeweight=document.getElementById('lungeweight').value;
+                obj.calveweight=document.getElementById('calveweight').value;
+                obj.liftweight=document.getElementById('liftweight').value;
+                obj.squatweight=document.getElementById('squatweight').value;
+                obj.curlweight=document.getElementById('curlweight').value;
+                obj.tricepweight=document.getElementById('tricepweight').value;
+                obj.pushupweight=document.getElementById('pushupweight').value;
+                obj.benchweight=document.getElementById('benchweight').value;
 		var listObj=localStorage.getItem('WORKOUTS');
-		if(listObj!=null){
+		if(listObj!==null){
 		  listObj=JSON.parse(listObj); //THIS PRODUCES ARRAY OF WORKOUTS
 		  listObj.push(obj);
 		} else {
@@ -72,24 +71,24 @@
                 obj.tricepset=document.getElementById('tricepset').value;
                 obj.pushupset=document.getElementById('pushupset').value;
                 obj.benchset=document.getElementById('benchset').value;
-               	obj.lungeset=document.getElementById('lungeset').value;
-                obj.calveset=document.getElementById('calveset').value;
-                obj.liftset=document.getElementById('liftset').value;
-                obj.squatset=document.getElementById('squatset').value;
-                obj.curlset=document.getElementById('curlset').value;
-                obj.tricepset=document.getElementById('tricepset').value;
-                obj.pushupset=document.getElementById('pushupset').value;
-                obj.benchset=document.getElementById('benchset').value;
-                obj.lungeset=document.getElementById('lungeset').value;
-                obj.calveset=document.getElementById('calveset').value;
-                obj.liftset=document.getElementById('liftset').value;
-                obj.squatset=document.getElementById('squatset').value;
-                obj.curlset=document.getElementById('curlset').value;
-                obj.tricepset=document.getElementById('tricepset').value;
-                obj.pushupset=document.getElementById('pushupset').value;
-                obj.benchset=document.getElementById('benchset').value;
+                obj.lungereps=document.getElementById('lungereps').value;
+                obj.calvereps=document.getElementById('calvereps').value;
+                obj.liftreps=document.getElementById('liftreps').value;
+                obj.squatreps=document.getElementById('squatreps').value;
+                obj.curlreps=document.getElementById('curlreps').value;
+                obj.tricepreps=document.getElementById('tricepreps').value;
+                obj.pushupreps=document.getElementById('pushupreps').value;
+                obj.benchreps=document.getElementById('benchreps').value;
+                obj.lungeweight=document.getElementById('lungeweight').value;
+                obj.calveweight=document.getElementById('calveweight').value;
+                obj.liftweight=document.getElementById('liftweight').value;
+                obj.squatweight=document.getElementById('squatweight').value;
+                obj.curlweight=document.getElementById('curlweight').value;
+                obj.tricepweight=document.getElementById('tricepweight').value;
+                obj.pushupweight=document.getElementById('pushupweight').value;
+                obj.benchweight=document.getElementById('benchweight').value;
 		var listObj=localStorage.getItem('WORKOUTS');
-		if(listObj!=null){
+		if(listObj!==null){
 		  listObj=JSON.parse(listObj); //THIS PRODUCES ARRAY OF WORKOUTS
 		  listObj.push(obj);
 		} else {
@@ -278,7 +277,7 @@
 		document.getElementById("result2").innerHTML = "LIFETIME workouts logged: " + localStorage.clickcount;
 	
 		//BD-DISPLAYS ALERT MESSAGE EVERY FOURTH WORKOUT
-		if (localStorage.clickcount % 4 == 0) {
+		if (localStorage.clickcount % 4 === 0) {
 		alert("You are a champion!  Keep up the great work!");}
 		} else {
 		document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
