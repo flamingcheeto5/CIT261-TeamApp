@@ -9,7 +9,7 @@
 </head>
 
 <body>
-<p class = "top"></p>
+<div class = "top"></div>
 
   <h2>Exercise Tracker</h2>
     <button type="button" onclick="loadGoals()">Enter Exercise Goals</button>
@@ -25,18 +25,18 @@
    
   <div id="result"></div>
   <div id="result1"></div>
-  <p class = "bottom"></p>
   <div id="result2"></div>
-  
+   
   <div id="container">
 	  <div id="history" onClick="zoomIn()"></div>
   </div>
+ 
 	<p>
 	  <label><input type="button" value="Clear" onclick="ClearAll()">
 	  <i>* Removes all items</i></label>
   </p>
   <input type="button" value="+" onClick="zoomIn()"/>
   <input type="button" value="-" onClick="zoomOut()"/>
-
 </body>
+<div class = "bottom"></div>
 </html>

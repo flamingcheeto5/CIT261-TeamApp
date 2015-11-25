@@ -10,32 +10,39 @@ and open the template in the editor.
 /* RED BACKGROUND AND WHITE WORKOUT LOG AND HISTORY TEXT */
 body {
 	background-color: #700000 ;
-    margin: 100px;
-    text-align: center;
+        background-image: url(gym1.jpg);
+        background-repeat: no-repeat;
+        background-position: center; 
+        margin: 100px;
+        text-align: center;
 	color: white;
 	font-family: sans-serif;
 	text-align: center;
+
     }
-.bottom {
-	background: URL(css/shutterstock_186779978.jpg);
+/*.bottom {
+	background: URL(h-f.jpg);
 	font-family: Verdana, Geneva, sans-serif;
-	text-align:right;
+	text-align:center;
 	padding: 30px 40px 10px;
 	font-size: 1.2em;
-	//background-color:#f6aacc;
-	color: #3C270D;
+        color: #3C270D;
 	border-radius: 0 0 15px 15px;
 	-moz-border-radius-bottomleft: 15px;
 	-moz-border-radius-bottomright: 15px;
 	-webkit-border-bottom-left-radius: 15px;
 	-webkit-border-bottom-right-radius: 15px;
-}
+}*/
 /* WHITE "EXERCISE TRACKER" HEADING */
 h2 {
     font-size: 24px; 
     color: white;
-	font-family: sans-serif;
-	text-align: center;
+    background-color: black;
+    width: 300px;
+    font-family: sans-serif;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
     }
 /* "WORKOUT HISTORY" HEADING */
 h3 {
@@ -92,20 +99,19 @@ input[type=number]:focus {
 	text-align: center;
     }	
 /* TOP PAGE HEADING */
-.top {
-	background: URL(shutterstock_186779978.jpg);
+/*.top {
+	background: URL(h-f.jpg);
 	font-family: Verdana, Geneva, sans-serif;
-	text-align:right;
+	text-align:center;
 	padding: 30px 40px 10px;
 	font-size: 1.2em;
-	//background-color:#f6aacc;
 	color: #3C270D;
 	border-radius: 30px 15px 0 0;
 	-moz-border-radius-topleft: 15px;
 	-moz-border-radius-topright: 15px;
 	-webkit-border-top-left-radius: 15px;
 	-webkit-border-top-right-radius: 15px;
-}
+}*/
 /* SAVE BUTTON WIGGLE */
 @-webkit-keyframes wiggle {
 	0% {
