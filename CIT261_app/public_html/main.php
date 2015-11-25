@@ -34,14 +34,30 @@
 //CALL THIS FUNCTION ON BUTTON CLICK TO STORE WORKOUT GOALS
     function saveDataInLSGoals(){
 		var obj={};
-			obj.lunges=document.getElementById('lunges').value;
-			obj.calves=document.getElementById('calves').value;
-			obj.lifts=document.getElementById('lifts').value;
-			obj.squats=document.getElementById('squats').value;
-			obj.curls=document.getElementById('curls').value;
-			obj.triceps=document.getElementById('triceps').value;
-			obj.pushups=document.getElementById('pushups').value;
-			obj.bench=document.getElementById('bench').value;
+	obj.lungeset=document.getElementById('lungeset').value;
+                obj.calveset=document.getElementById('calveset').value;
+                obj.liftset=document.getElementById('liftset').value;
+                obj.squatset=document.getElementById('squatset').value;
+                obj.curlset=document.getElementById('curlset').value;
+                obj.tricepset=document.getElementById('tricepset').value;
+                obj.pushupset=document.getElementById('pushupset').value;
+                obj.benchset=document.getElementById('benchset').value;
+                obj.lungeset=document.getElementById('lungereps').value;
+                obj.calveset=document.getElementById('calvereps').value;
+                obj.liftset=document.getElementById('liftreps').value;
+                obj.squatset=document.getElementById('squatreps').value;
+                obj.curlset=document.getElementById('curlreps').value;
+                obj.tricepset=document.getElementById('tricepreps').value;
+                obj.pushupset=document.getElementById('pushupreps').value;
+                obj.benchset=document.getElementById('benchreps').value;
+                obj.lungeset=document.getElementById('lungeweight').value;
+                obj.calveset=document.getElementById('calveweight').value;
+                obj.liftset=document.getElementById('liftweight').value;
+                obj.squatset=document.getElementById('squatweight').value;
+                obj.curlset=document.getElementById('curlweight').value;
+                obj.tricepset=document.getElementById('tricepweight').value;
+                obj.pushupset=document.getElementById('pushupweight').value;
+                obj.benchset=document.getElementById('benchweight').value;
 		var listObj=localStorage.getItem('WORKOUTS');
 		if(listObj!=null){
 		  listObj=JSON.parse(listObj); //THIS PRODUCES ARRAY OF WORKOUTS
@@ -56,14 +72,30 @@
 //CALL THIS FUNCTION ON BUTTON CLICK TO STORE ACTUAL WORKOUT
 	function saveDataInLSWorkouts(){
 		var obj={};
-			obj.lunges=document.getElementById('lunges').value;
-			obj.calves=document.getElementById('calves').value;
-			obj.lifts=document.getElementById('lifts').value;
-			obj.squats=document.getElementById('squats').value;
-			obj.curls=document.getElementById('curls').value;
-			obj.triceps=document.getElementById('triceps').value;
-			obj.pushups=document.getElementById('pushups').value;
-			obj.bench=document.getElementById('bench').value;
+	        obj.lungeset=document.getElementById('lungeset').value;
+                obj.calveset=document.getElementById('calveset').value;
+                obj.liftset=document.getElementById('liftset').value;
+                obj.squatset=document.getElementById('squatset').value;
+                obj.curlset=document.getElementById('curlset').value;
+                obj.tricepset=document.getElementById('tricepset').value;
+                obj.pushupset=document.getElementById('pushupset').value;
+                obj.benchset=document.getElementById('benchset').value;
+                obj.lungeset=document.getElementById('lungereps').value;
+                obj.calveset=document.getElementById('calvereps').value;
+                obj.liftset=document.getElementById('liftreps').value;
+                obj.squatset=document.getElementById('squatreps').value;
+                obj.curlset=document.getElementById('curlreps').value;
+                obj.tricepset=document.getElementById('tricepreps').value;
+                obj.pushupset=document.getElementById('pushupreps').value;
+                obj.benchset=document.getElementById('benchreps').value;
+                obj.lungeset=document.getElementById('lungeweight').value;
+                obj.calveset=document.getElementById('calveweight').value;
+                obj.liftset=document.getElementById('liftweight').value;
+                obj.squatset=document.getElementById('squatweight').value;
+                obj.curlset=document.getElementById('curlweight').value;
+                obj.tricepset=document.getElementById('tricepweight').value;
+                obj.pushupset=document.getElementById('pushupweight').value;
+                obj.benchset=document.getElementById('benchweight').value;
 		var listObj=localStorage.getItem('WORKOUTS');
 		if(listObj!=null){
 		  listObj=JSON.parse(listObj); //THIS PRODUCES ARRAY OF WORKOUTS
@@ -87,22 +119,14 @@
 			var curlsets, tricepsets, pushupsets, benchsets, lungesets, calvesets, liftsets, squatsets,
 					curlreps, tricepreps, pushupreps, benchreps, lungereps, calvereps, liftreps, squatreps,
 					curlweight, tricepweight, pushupweight, benchweight, lungeweight, calveweight, liftweight, squatweight;
-				curls = dataArr[i]['curls'];
-				triceps = dataArr[i]['triceps'];
-				pushups = dataArr[i]['pushups'];
-				bench = dataArr[i]['bench'];
-				lunges = dataArr[i]['lunges'];
-				calves = dataArr[i]['calves'];
-				lifts = dataArr[i]['lifts'];
-				squats = dataArr[i]['squats'];
-					curlsets = dataArr[i]['curlsets'];
-                    tricepsets = dataArr[i]['tricepsets'];
-                    pushupsets = dataArr[i]['pushupsets'];
-                    benchsets = dataArr[i]['benchsets'];
-                    lungesets = dataArr[i]['lungesets'];
-                    calvesets = dataArr[i]['calvesets'];
-                    liftsets = dataArr[i]['liftsets'];
-                    squatsets = dataArr[i]['squatsets'];
+				curlsets = dataArr[i]['curlsets'];
+                                tricepsets = dataArr[i]['tricepsets'];
+                                pushupsets = dataArr[i]['pushupsets'];
+                                benchsets = dataArr[i]['benchsets'];
+                                lungesets = dataArr[i]['lungesets'];
+                                calvesets = dataArr[i]['calvesets'];
+                                liftsets = dataArr[i]['liftsets'];
+                                squatsets = dataArr[i]['squatsets'];
 						curlreps = dataArr[i]['curlreps'];
 						tricepreps = dataArr[i]['tricepreps'];
 						pushupreps = dataArr[i]['pushupreps'];
@@ -155,22 +179,14 @@
 				var curlsets, tricepsets, pushupsets, benchsets, lungesets, calvesets, liftsets, squatsets,
 					curlreps, tricepreps, pushupreps, benchreps, lungereps, calvereps, liftreps, squatreps,
 					curlweight, tricepweight, pushupweight, benchweight, lungeweight, calveweight, liftweight, squatweight;
-				curls = dataArr[i]['curls'];
-				triceps = dataArr[i]['triceps'];
-				pushups = dataArr[i]['pushups'];
-				bench = dataArr[i]['bench'];
-				lunges = dataArr[i]['lunges'];
-				calves = dataArr[i]['calves'];
-				lifts = dataArr[i]['lifts'];
-				squats = dataArr[i]['squats'];
-					curlsets = dataArr[i]['curlsets'];
-                    tricepsets = dataArr[i]['tricepsets'];
-                    pushupsets = dataArr[i]['pushupsets'];
-                    benchsets = dataArr[i]['benchsets'];
-                    lungesets = dataArr[i]['lungesets'];
-                    calvesets = dataArr[i]['calvesets'];
-                    liftsets = dataArr[i]['liftsets'];
-                    squatsets = dataArr[i]['squatsets'];
+				curlsets = dataArr[i]['curlsets'];
+                                tricepsets = dataArr[i]['tricepsets'];
+                                pushupsets = dataArr[i]['pushupsets'];
+                                benchsets = dataArr[i]['benchsets'];
+                                lungesets = dataArr[i]['lungesets'];
+                                calvesets = dataArr[i]['calvesets'];
+                                liftsets = dataArr[i]['liftsets'];
+                                squatsets = dataArr[i]['squatsets'];
 						curlreps = dataArr[i]['curlreps'];
 						tricepreps = dataArr[i]['tricepreps'];
 						pushupreps = dataArr[i]['pushupreps'];
