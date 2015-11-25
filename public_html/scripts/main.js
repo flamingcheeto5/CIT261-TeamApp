@@ -194,7 +194,7 @@
 							calveweight = dataArr[i]['calveweight'];
 							liftweight = dataArr[i]['liftweight'];
 							squatweight = dataArr[i]['squatweight'];
-				results += "<table><tbody><tr><th>Goals " + (i + 1) + "</th><th>Sets</th><th>Reps</th><th>Weight</th></tr>\n\
+				results += "<table><tbody><tr><th>Workouts " + (i + 1) + "</th><th>Sets</th><th>Reps</th><th>Weight</th></tr>\n\
 				<tr><td>Curls</td>\n<td>" + curlset + "</td><td>" 	+ curlreps 	+ "</td><td>" 	+ curlweight 	+ "</td></tr>\n\
 				<tr><td>Triceps</td>\n<td>" + tricepset + "</td><td>" 	+ tricepreps 	+ "</td><td>" 	+ tricepweight 	+ "</td></tr>\n\
 				<tr><td>Pushups</td>\n<td>" 		+ pushupset 	+ "</td><td>" 	+ pushupreps 	+ "</td><td>" 	+ pushupweight 	+ "</td></tr>\n\

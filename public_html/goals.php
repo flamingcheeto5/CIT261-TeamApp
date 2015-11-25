@@ -10,7 +10,7 @@
 	<label>Calf Raises:</label><input type="number" id="calveset" max="999" min="0"><input type="number" id="calvereps" max="99" min="0"><input type="number" id="calveweight" max="99" min="0"><br>
 	<label>Leg Lifts:</label><input type="number" id="liftset" max="999" min="0"><input type="number" id="liftreps" max="99" min="0"><input type="number" id="liftweight" max="99" min="0"><br>
 	<label>Squats:</label><input type="number" id="squatset" max="999" min="0"><input type="number" id="squatreps" max="99" min="0"><input type="number" id="squatweight" max="99" min="0"><br>
-	<button class="wiggle" type = "button" onClick = "saveDataInLSGoals()">Store Results</button>
+        <A HREF="javascript:history.go(0)"><button class="wiggle" type = "button" onClick = "saveDataInLSGoals()">Store Results</button></A>
 </div>
 <div id="history" onClick="zoomIn()">
 	<table id=output></table>
