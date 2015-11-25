@@ -116,17 +116,17 @@
 			var results = "";
 			var i = 0;
 			for (i=0; i < dataArr.length; i++) {
-			var curlsets, tricepsets, pushupsets, benchsets, lungesets, calvesets, liftsets, squatsets,
+			var curlset, tricepset, pushupset, benchset, lungeset, calveset, liftset, squatset,
 					curlreps, tricepreps, pushupreps, benchreps, lungereps, calvereps, liftreps, squatreps,
 					curlweight, tricepweight, pushupweight, benchweight, lungeweight, calveweight, liftweight, squatweight;
-				curlsets = dataArr[i]['curlsets'];
-                                tricepsets = dataArr[i]['tricepsets'];
-                                pushupsets = dataArr[i]['pushupsets'];
-                                benchsets = dataArr[i]['benchsets'];
-                                lungesets = dataArr[i]['lungesets'];
-                                calvesets = dataArr[i]['calvesets'];
-                                liftsets = dataArr[i]['liftsets'];
-                                squatsets = dataArr[i]['squatsets'];
+				curlset = dataArr[i]['curlset'];
+                                tricepset = dataArr[i]['tricepset'];
+                                pushupset = dataArr[i]['pushupset'];
+                                benchset = dataArr[i]['benchset'];
+                                lungeset = dataArr[i]['lungeset'];
+                                calveset = dataArr[i]['calveset'];
+                                liftset = dataArr[i]['liftset'];
+                                squatset = dataArr[i]['squatset'];
 						curlreps = dataArr[i]['curlreps'];
 						tricepreps = dataArr[i]['tricepreps'];
 						pushupreps = dataArr[i]['pushupreps'];
@@ -144,14 +144,14 @@
 							liftweight = dataArr[i]['liftweight'];
 							squatweight = dataArr[i]['squatweight'];
 				results += "<table><tbody><tr><th>Goals " + (i + 1) + "</th><th>Sets</th><th>Reps</th><th>Weight</th></tr>\n\
-				<tr><td>Curls</td>\n<td>" 		+ curlsets 	+ "</td><td>" 	+ curlreps 	+ "</td><td>" 	+ curlweight 	+ "</td></tr>\n\
-				<tr><td>Curls</td>\n<td>" 		+ tricepsets 	+ "</td><td>" 	+ tricepreps 	+ "</td><td>" 	+ tricepweight 	+ "</td></tr>\n\
-				<tr><td>Curls</td>\n<td>" 		+ pushupsets 	+ "</td><td>" 	+ pushupreps 	+ "</td><td>" 	+ pushupweight 	+ "</td></tr>\n\
-				<tr><td>Curls</td>\n<td>" 		+ benchsets 	+ "</td><td>" 	+ benchreps 	+ "</td><td>" 	+ benchweight 	+ "</td></tr>\n\
-				<tr><td>Curls</td>\n<td>" 		+ lungesets 	+ "</td><td>" 	+ lungereps 	+ "</td><td>" 	+ lungeweight 	+ "</td></tr>\n\
-				<tr><td>Curls</td>\n<td>" 		+ calvesets 	+ "</td><td>" 	+ calvereps 	+ "</td><td>" 	+ calveweight 	+ "</td></tr>\n\
-				<tr><td>Curls</td>\n<td>" 		+ liftsets 		+ "</td><td>" 	+ liftreps 	+ "</td><td>" 		+ liftweight 	+ "</td></tr>\n\
-				<tr><td>Curls</td>\n<td>" 		+ squatsets 	+ "</td><td>" 	+ squatreps 	+ "</td><td>" 	+ squatweight 	+ "</td></tr></table>\n";
+				<tr><td>Curls</td>\n<td>" + curlset + "</td><td>" 	+ curlreps 	+ "</td><td>" 	+ curlweight 	+ "</td></tr>\n\
+				<tr><td>Triceps</td>\n<td>" + tricepset + "</td><td>" 	+ tricepreps 	+ "</td><td>" 	+ tricepweight 	+ "</td></tr>\n\
+				<tr><td>Pushups</td>\n<td>" 		+ pushupset 	+ "</td><td>" 	+ pushupreps 	+ "</td><td>" 	+ pushupweight 	+ "</td></tr>\n\
+				<tr><td>Bench Press</td>\n<td>" 		+ benchset 	+ "</td><td>" 	+ benchreps 	+ "</td><td>" 	+ benchweight 	+ "</td></tr>\n\
+				<tr><td>Lunges</td>\n<td>" 		+ lungeset 	+ "</td><td>" 	+ lungereps 	+ "</td><td>" 	+ lungeweight 	+ "</td></tr>\n\
+				<tr><td>Calf Raises</td>\n<td>" 		+ calveset 	+ "</td><td>" 	+ calvereps 	+ "</td><td>" 	+ calveweight 	+ "</td></tr>\n\
+				<tr><td>Lifts</td>\n<td>" 		+ liftset 		+ "</td><td>" 	+ liftreps 	+ "</td><td>" 		+ liftweight 	+ "</td></tr>\n\
+				<tr><td>Squats</td>\n<td>" 		+ squatset 	+ "</td><td>" 	+ squatreps 	+ "</td><td>" 	+ squatweight 	+ "</td></tr></table>\n";
 				}	
 	
 	
@@ -176,17 +176,17 @@
 			var results = "";
 			var i = 0;
 			for (i=0; i<=dataArr.length - 1; i++) {
-				var curlsets, tricepsets, pushupsets, benchsets, lungesets, calvesets, liftsets, squatsets,
+							var curlset, tricepset, pushupset, benchset, lungeset, calveset, liftset, squatset,
 					curlreps, tricepreps, pushupreps, benchreps, lungereps, calvereps, liftreps, squatreps,
 					curlweight, tricepweight, pushupweight, benchweight, lungeweight, calveweight, liftweight, squatweight;
-				curlsets = dataArr[i]['curlsets'];
-                                tricepsets = dataArr[i]['tricepsets'];
-                                pushupsets = dataArr[i]['pushupsets'];
-                                benchsets = dataArr[i]['benchsets'];
-                                lungesets = dataArr[i]['lungesets'];
-                                calvesets = dataArr[i]['calvesets'];
-                                liftsets = dataArr[i]['liftsets'];
-                                squatsets = dataArr[i]['squatsets'];
+				curlset = dataArr[i]['curlset'];
+                                tricepset = dataArr[i]['tricepset'];
+                                pushupset = dataArr[i]['pushupset'];
+                                benchset = dataArr[i]['benchset'];
+                                lungeset = dataArr[i]['lungeset'];
+                                calveset = dataArr[i]['calveset'];
+                                liftset = dataArr[i]['liftset'];
+                                squatset = dataArr[i]['squatset'];
 						curlreps = dataArr[i]['curlreps'];
 						tricepreps = dataArr[i]['tricepreps'];
 						pushupreps = dataArr[i]['pushupreps'];
@@ -203,25 +203,22 @@
 							calveweight = dataArr[i]['calveweight'];
 							liftweight = dataArr[i]['liftweight'];
 							squatweight = dataArr[i]['squatweight'];
-				results += "<table><tbody><tr><th>Workouts " + (i + 1) + "</th><th>Sets</th><th>Reps</th><th>Weight</th></tr>\n\
-				<tr><td>Curls</td>\n<td>" 		+ curlsets 	+ "</td><td>" 	+ curlreps 	+ "</td><td>" 	+ curlweight 	+ "</td></tr>\n\
-				<tr><td>Curls</td>\n<td>" 		+ tricepsets 	+ "</td><td>" 	+ tricepreps 	+ "</td><td>" 	+ tricepweight 	+ "</td></tr>\n\
-				<tr><td>Curls</td>\n<td>" 		+ pushupsets 	+ "</td><td>" 	+ pushupreps 	+ "</td><td>" 	+ pushupweight 	+ "</td></tr>\n\
-				<tr><td>Curls</td>\n<td>" 		+ benchsets 	+ "</td><td>" 	+ benchreps 	+ "</td><td>" 	+ benchweight 	+ "</td></tr>\n\
-				<tr><td>Curls</td>\n<td>" 		+ lungesets 	+ "</td><td>" 	+ lungereps 	+ "</td><td>" 	+ lungeweight 	+ "</td></tr>\n\
-				<tr><td>Curls</td>\n<td>" 		+ calvesets 	+ "</td><td>" 	+ calvereps 	+ "</td><td>" 	+ calveweight 	+ "</td></tr>\n\
-				<tr><td>Curls</td>\n<td>" 		+ liftsets 		+ "</td><td>" 	+ liftreps 	+ "</td><td>" 		+ liftweight 	+ "</td></tr>\n\
-				<tr><td>Curls</td>\n<td>" 		+ squatsets 	+ "</td><td>" 	+ squatreps 	+ "</td><td>" 	+ squatweight 	+ "</td></tr></table>\n";
+				results += "<table><tbody><tr><th>Goals " + (i + 1) + "</th><th>Sets</th><th>Reps</th><th>Weight</th></tr>\n\
+				<tr><td>Curls</td>\n<td>" + curlset + "</td><td>" 	+ curlreps 	+ "</td><td>" 	+ curlweight 	+ "</td></tr>\n\
+				<tr><td>Triceps</td>\n<td>" + tricepset + "</td><td>" 	+ tricepreps 	+ "</td><td>" 	+ tricepweight 	+ "</td></tr>\n\
+				<tr><td>Pushups</td>\n<td>" 		+ pushupset 	+ "</td><td>" 	+ pushupreps 	+ "</td><td>" 	+ pushupweight 	+ "</td></tr>\n\
+				<tr><td>Bench Press</td>\n<td>" 		+ benchset 	+ "</td><td>" 	+ benchreps 	+ "</td><td>" 	+ benchweight 	+ "</td></tr>\n\
+				<tr><td>Lunges</td>\n<td>" 		+ lungeset 	+ "</td><td>" 	+ lungereps 	+ "</td><td>" 	+ lungeweight 	+ "</td></tr>\n\
+				<tr><td>Calf Raises</td>\n<td>" 		+ calveset 	+ "</td><td>" 	+ calvereps 	+ "</td><td>" 	+ calveweight 	+ "</td></tr>\n\
+				<tr><td>Lifts</td>\n<td>" 		+ liftset 		+ "</td><td>" 	+ liftreps 	+ "</td><td>" 		+ liftweight 	+ "</td></tr>\n\
+				<tr><td>Squats</td>\n<td>" 		+ squatset 	+ "</td><td>" 	+ squatreps 	+ "</td><td>" 	+ squatweight 	+ "</td></tr></table>\n";
 				}						
 								
 		
 							
 								
 //BELOW IS AN EXAMPLE OF DOM REPLACE
-//var container = document.getElementById("container");
-//var old = document.getElementById("input");
-//var newdiv = document.getElementById("history");
-//container.replaceChild(newdiv, old);
+
 
 	document.getElementById('container').innerHTML = results;
         } else {
