@@ -13,6 +13,7 @@ body {
         background-image: url(gym1.jpg);
         background-repeat: no-repeat;
         background-position: center; 
+        background-attachment: fixed;
         margin: 100px;
         text-align: center;
 	color: white;
